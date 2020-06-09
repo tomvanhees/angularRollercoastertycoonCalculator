@@ -1,0 +1,29 @@
+<div class="card mt-3" *ngIf="ride.name !== ''">
+  <div class="card-header">{{ ride.name}}</div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Ride age (Months)</th>
+        <th scope="col">Multiplier</th>
+        <th scope="col">Aged ride value</th>
+        <th scope="col">Max price for
+          "Good value"
+        </th>
+        <th scope="col">Min price for
+          "Too expensive"
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let ride of calculatedRidePrice">
+        <td>{{ ride.age}}</td>
+        <td>{{ ride.multiplier}}</td>
+        <td>{{ ride.rideValue }}</td>
+        <td>{{ride.max_price }}</td>
+        <td>{{ride.min_price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

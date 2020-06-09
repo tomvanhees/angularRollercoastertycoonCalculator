@@ -1,0 +1,3 @@
+<select #rctRideSelector name="" id="" class="form-control" (change)="selectRide(rctRideSelector.value)">
+  <option value="{{ride.id}}" *ngFor="let ride of rides">{{ride.name}}</option>
+</select>
